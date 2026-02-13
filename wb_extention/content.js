@@ -427,8 +427,8 @@ function createActionButtonForTitle() {
   btn.style.padding = "6px 10px";
   btn.style.marginLeft = "8px";
   btn.style.borderRadius = "999px";
-  btn.style.border = "1px solid #e8e8e8";
-  btn.style.background = "#1f1f1f";
+  btn.style.border = "1px solid #8A2BE2";
+  btn.style.background = "#8A2BE2";
   btn.style.color = "#fff";
   btn.style.fontWeight = "700";
   btn.style.fontSize = "12px";
@@ -443,12 +443,12 @@ function mountFloatingFallbackButton() {
   const btn = createActionButtonForTitle();
   btn.id = WARDROBE.buttonId; // ensure exact id
   btn.style.position = "fixed";
-  btn.style.top = "92px";
-  btn.style.right = "16px";
+  btn.style.top = "121px";
+  btn.style.right = "154px";
   btn.style.zIndex = "2147483647";
   btn.style.boxShadow = "0 10px 22px rgba(0,0,0,0.22)";
-  btn.style.padding = "10px 12px";
-  btn.style.fontSize = "13px";
+  btn.style.padding = "15px 19px";
+  btn.style.fontSize = "20px";
   document.documentElement.appendChild(btn);
 }
 

@@ -36,10 +36,10 @@ JWT_TOKEN = os.getenv("JWT_TOKEN")
 if not JWT_TOKEN:
     raise EnvironmentError("JWT_TOKEN не найден в .env")
 
-# === Клиент LLM ===
+# === Клиент LLM (GLM-4.5-Air) ===
 client = OpenAI(
     api_key=JWT_TOKEN,
-    base_url="https://corellm.wb.ru/llama3/v1"
+    base_url="https://corellm.wb.ru/glm-45-air/v1"
 )
 
 # === ПРАВИЛЬНЫЙ промт: анализ ОДНОГО товара ===
@@ -133,7 +133,7 @@ def enrich_product_name(nm_id: int, product_name: str) -> dict | None:
             messages=[
                 {"role": "user", "content": prompt}
             ],
-            model="Meta-Llama-3-70B-Instruct-GPTQ",
+            model="glm-4.5-air",
             temperature=0.0,
             max_tokens=200,
             stream=False
